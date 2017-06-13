@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  wjEaseMobChatDemo
+//
+//  Created by gouzi on 2017/6/6.
+//  Copyright © 2017年 wj. All rights reserved.
+//
+
+
+#ifdef __OBJC__
+
+
+#pragma mark - 引用三方的库
+#import <Hyphenate/Hyphenate.h>
+#import <FMDB/FMDB.h>
+#import <UIKit/UIKit.h>
+#import "NSDateFormatter+Category.h"
+#import "NSDate+Category.h"
+
+#pragma mark - 引用自己的utils
+#import "wjDBUtils.h"
+
+
+#pragma mark - 自定义
+// log日志的修改
+#if DEBUG
+#define wjLog(...) NSLog(@"%s %d行\n %@\n\n",__func__, __LINE__, [NSString stringWithFormat:__VA_ARGS__])
+#else
+#define wjLog(...)
+#endif
+
+#endif
