@@ -86,7 +86,6 @@ static NSString *recieveID = @"RecieveIdCardCell";
     NSDictionary *ext = message.ext;
     NSString *name = ext[@"name"];
     self.wjNameLabel.text = name;
-    [EMClient sharedClient].currentUsername;
 }
 
 
